@@ -9,7 +9,7 @@
     <context id="testTables" targetRuntime="MyBatis3">
         <commentGenerator>
             <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
-            <property name="suppressAllComments" value="false" />
+            <property name="suppressAllComments" value="true" />
         </commentGenerator>
         <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
@@ -42,19 +42,31 @@
         </sqlMapGenerator>
         <!-- targetPackage：mapper接口生成的位置 -->
         <javaClientGenerator type="XMLMAPPER"
-                             targetPackage="com.cafucaa.alumniassociation.mapper"
-                             targetProject="src/main/java">
+                             targetPackage="mapping"
+                             targetProject="src/main/resources">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
         <!-- 指定数据库表 -->
+        <table schema="" tableName="activity"></table>
+        <table schema="" tableName="admin"></table>
         <table schema="" tableName="ca_activity"></table>
         <table schema="" tableName="ca_alumni"></table>
         <table schema="" tableName="ca_class"></table>
         <table schema="" tableName="ca_news"></table>
         <table schema="" tableName="ca_privalege"></table>
         <table schema="" tableName="ca_role"></table>
+        <table schema="" tableName="class1"></table>
+        <table schema="" tableName="class2"></table>
+        <table schema="" tableName="memoirs"></table>
+        <table schema="" tableName="news"></table>
+        <table schema="" tableName="notice"></table>
+        <table schema="" tableName="privalege"></table>
+        <table schema="" tableName="relationship_role_privalege"></table>
         <table schema="" tableName="relationships_activity_class"></table>
         <table schema="" tableName="relationships_role_privalege"></table>
+        <table schema="" tableName="role"></table>
+        <table schema="" tableName="souvenir"></table>
+        <table schema="" tableName="students_status_infomation"></table>
     </context>
 </generatorConfiguration>
